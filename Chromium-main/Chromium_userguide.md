@@ -1,0 +1,12 @@
+# Chromium使用说明
+
+## 1. 概述
+
+**Chromium** Chromium是由Google主导开发的网页浏览器。以BSD许可证等多重自由版权发行并开放源代码，Chromium的开发可能早自2006年即开始。Chromium是Google的Google Chrome浏览器背后的引擎，其目的是为了创建一个安全、稳定和快速的通用浏览器。
+
+## 2. 基本特点
+
+Chromium是一个由Google主导开发的网页浏览器。以BSD许可证等多重自由版权发行并开放源代码。Chromium的开发可能早自2006年即开始，设计思想基于简单、高速、稳定、安全等理念，在架构上使用了Apple发展出来的WebKit排版引擎、Safari的部份源代码与Firefox的成果，并采用Google独家开发出的V8引擎，以提升解译JavaScript的效率，而且设计了“沙盒”、“黑名单”、“无痕浏览”等功能，来实现稳定与安全的网页浏览环境。Chromium是Google为发展自家的浏览器Google Chrome（以下简称Chrome）而开启的计划，所以Chromium相当于Chrome的工程版或称实验版（尽管Chrome自身也有β版阶段），新功能会率先在Chromium上实现，待验证后才会应用在Chrome上，故Chrome的功能会相对落后、稳定。Chromium的更新速度很快，每隔数小时即有新的开发版本发布，而且可以免安装，下载zip封装版后解压缩即可使用（Windows下也有安装版）。Chrome虽然理论上也可以免安装，但Google仅提供安装版。
+Chromium和Chrome所使用的webkit内核，是目前公认的最快的网页浏览方式。
+使用Chromium开源代码（基于webkit内核）的浏览器有360极速浏览器、枫树极速浏览器、太阳花浏览器、世界之窗极速版、傲游浏览器和UC浏览器电脑版等。搜狗高速浏览器和qq浏览器官网未提及Chromium，只是说采用webkit内核，经网友测试这两款浏览器，极有可能也是使用的Chromium，只是官方不承认而已。
+2018年8月16日晚，红芯时代（北京）科技有限公司发布声明称：红芯浏览器内核是基于通用的浏览器内核架构(即Chromium开源项目，但不是Chrome浏览器)的基础上进行技术创新的；区别于传统的浏览器，红芯浏览器是专门针对企业办公场景设计的，国际上浏览器内核技术是不断迭代更新的，红芯浏览器内核 Redcore是基于 Chromium/Bnk。
