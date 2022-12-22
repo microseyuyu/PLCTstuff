@@ -15,16 +15,16 @@
 
 ## 安装 Chromium
 
-- 使用包管理器直接安装 
+- 使用包管理器直接安装
 
      `dnf install chromium`
      
-- Xfce桌面下打开终端，输入`chromium` 启动 Chromium。
+- Xfce 桌面下打开终端，输入`chromium` 启动 Chromium
 
 ```shell
   Chromium
 ```
 
-- 点击Application Finder图标,搜索Chromium，点击Launch
+- 点击 Application Finder 图标,搜索 Chromium，点击 Launch
 
      `
