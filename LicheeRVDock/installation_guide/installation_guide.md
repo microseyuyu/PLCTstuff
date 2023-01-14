@@ -8,7 +8,11 @@
 
 1）LicheeRV 开发板：由 CNRV 获取得到开发板。
 
+![LicheeRV](./img/LicheeRV.png)
+
 2）32G micro-sd 卡及读卡器：Kingston TF/MicroSD 卡，容量 32 GB，速度U1，带读卡器。
+
+![Kingston](./img/Kingston.png)
 
 3）电源适配器及 type-c 线。
 
