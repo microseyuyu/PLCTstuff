@@ -4,7 +4,7 @@
 
 先创建一个名为 rpmbuild 的文件夹，并使用 cd 指令进入。
 
-接着我们需要克隆[ nodejs 的仓库](https://gitee.com/openeuler-risc-v/nodejs)到 rpmbuild 中，并且创建一个名为 SOURCES 的文件夹，使用以下指令执行：
+接着我们需要克隆[ nodejs 的仓库 ](https://gitee.com/openeuler-risc-v/nodejs)到 rpmbuild 中，并且创建一个名为 SOURCES 的文件夹，使用以下指令执行：
 
 ```
  git clone https://gitee.com/openeuler-risc-v/nodejs SOURCES -b openEuler-22.03-LTS --depth 1
