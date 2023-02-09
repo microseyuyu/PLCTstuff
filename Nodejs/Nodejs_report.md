@@ -2,22 +2,51 @@
 
 ## 构建 Node.js
 
-如果构建目录的路径包含空格，则构建可能会失败。
+先将建一个名为 rpmbuild 的文件夹，并使用 cd 指令进入。
 
-### 构建 Node.js：
+接着我们需要克隆 nodejs 的仓库到 rpmbuild 中，并且创建一个名为 SOURCES 的文件夹，使用以下指令执行：
 
-```shell
-$ ./configure
-$ make -j4
+```
+ git clone https://gitee.com/openeuler-risc-v/nodejs SOURCES -b openEuler-22.03-LTS --depth 1
 ```
 
-我们可以使用 *Ninja* 来加速构建。
+> 该仓库中存在许多的分支，所以需要指定对应系统版本的 nodejs 进行 clone 。
 
-该 `-j4` 选项将导致 `make` 同时运行 4 个编译作业，这会减少构建时间。
+完成 clone 后，将 SOURCES 中的 nodejs.spec 与 node.js 拷贝到 rpmbuild 中，使用以下指令执行：
 
-以上要求 *Python* 为支持的 *Python* 版本。
+```
+cp SOURCES/nodejs.spec nodejs
+cp SOURCES/nodejs.spec nodejs.spec
+```
 
-构建后，设置防火墙规则可以避免在运行测试时弹出窗口要求接受传入的网络连接。
+开始构建 nodejs ，请输入以下指令开始构建：
+
+```
+rpmbuild -bp nodejs.spec
+rpmbuild -bb nodejs.spec
+```
+
+> 其中 -bp 的意思是开始进行准备， -bb 是开始编译
+
+### 您可能遇到的状况
+
+```
+[root@openEuler-riscv64 rpmbuild]# rpmbuild -bb nodejs.spec
+error: Failed build dependencies:
+ brotli-devel is needed by nodejs-1:16.14.2-1.riscv64
+ chrpath is needed by nodejs-1:16.14.2-1.riscv64
+ libnghttp2-devel >= 1.45.0 is needed by nodejs-1:16.14.2-1.riscv64
+ libuv-devel >= 1:1.43.0 is needed by nodejs-1:16.14.2-1.riscv64
+ nodejs-packaging is needed by nodejs-1:16.14.2-1.riscv64
+ openssl-devel >= 1:1.1.1 is needed by nodejs-1:16.14.2-1.riscv64
+ python3-devel is needed by nodejs-1:16.14.2-1.riscv64
+```
+
+若出现以上的报错，说明您的系统中缺失了构建所需的依赖。请使用 yum 进行补充，例如安装 brotli-devel ：
+
+```
+yum install brotli-devel
+```
 
 ## 安装 Node.js
 
