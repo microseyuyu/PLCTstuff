@@ -48,6 +48,16 @@ error: Failed build dependencies:
 yum install brotli-devel
 ```
 
+## 构建意义
+
+在该测试包中的  ```Makefile``` 中存在以下注释：
+
+```
+# Prepare the build for running the tests.
+```
+
+虽然您可以通过使用 dnf 去进行安装 nodejs，但这不符合该测试的前提要求，所以请通过源码进行构建。
+
 ## 安装 Node.js
 
 将此版本的 *Node.js* 安装到系统目录中：
