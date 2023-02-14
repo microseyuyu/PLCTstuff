@@ -1,5 +1,15 @@
 # Node.js 调研报告
 
+## 构建意义
+
+在该测试包中的  ```Makefile``` 中存在以下注释：
+
+```
+# Prepare the build for running the tests.
+```
+
+虽然您可以通过使用 dnf 去进行安装 nodejs，但这并不符合该测试的前提要求，所以请通过源码进行构建。
+
 ## 构建 Node.js
 
 先创建一个名为 rpmbuild 的文件夹，并使用 cd 指令进入。
@@ -48,15 +58,6 @@ error: Failed build dependencies:
 yum install brotli-devel
 ```
 
-## 构建意义
-
-在该测试包中的  ```Makefile``` 中存在以下注释：
-
-```
-# Prepare the build for running the tests.
-```
-
-虽然您可以通过使用 dnf 去进行安装 nodejs，但这不符合该测试的前提要求，所以请通过源码进行构建。
 
 ## 安装 Node.js
 
